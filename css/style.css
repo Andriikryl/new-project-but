@@ -4,6 +4,117 @@
 .navbar .navbar-brand {
   z-index: 100;
 }
+@media screen and (max-width: 990px) {
+  .navbar .navbar-brand {
+    display: none;
+  }
+}
+
+header {
+  z-index: 130;
+}
+@media screen and (max-width: 990px) {
+  header .header__text {
+    display: none;
+  }
+}
+
+.cube__box {
+  z-index: 140;
+  position: relative;
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+  perspective-origin: top right;
+}
+.cube__box .cube {
+  display: none;
+  position: relative;
+  width: 90px;
+  height: 95px;
+  transform-style: preserve-3d;
+  -webkit-animation: cubeRotate 10s linear infinite;
+  animation: cubeRotate 10s linear infinite;
+}
+@media screen and (max-width: 990px) {
+  .cube__box .cube {
+    display: block;
+    z-index: 140;
+    position: relative;
+  }
+}
+.cube__box .cube .side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.cube__box .cube .front {
+  background-color: hsla(0deg, 0%, 100%, 0.8);
+  transform: translateZ(45px);
+}
+.cube__box .cube .back {
+  background-color: hsla(0deg, 0%, 100%, 0.8);
+  transform: translateZ(-45px);
+}
+.cube__box .cube .left {
+  background-color: hsla(0deg, 0%, 100%, 0.8);
+  transform: rotateY(90deg) translateZ(45px);
+}
+.cube__box .cube .right {
+  background-color: hsla(0deg, 0%, 100%, 0.8);
+  transform: rotateY(-90deg) translateZ(45px);
+}
+.cube__box .cube .top {
+  background-color: hsla(0deg, 0%, 100%, 0.8);
+  transform: rotateX(90deg) translateZ(45px);
+}
+.cube__box .cube .bottom {
+  background-color: hsla(0deg, 0%, 100%, 0.8);
+  transform: rotateX(-90deg) translateZ(45px);
+}
+.cube__box .cube .side__front__img {
+  width: 85px;
+  height: 85px;
+}
+.cube__box .cube .side__left__img {
+  width: 85px;
+  height: 85px;
+}
+.cube__box .cube .side__right__img {
+  width: 85px;
+  height: 85px;
+}
+.cube__box .cube .side__back__img {
+  width: 85px;
+  height: 85px;
+}
+.cube__box .cube .side__top__img {
+  width: 85px;
+  height: 85px;
+}
+.cube__box .cube .side__bottom__img {
+  width: 85px;
+  height: 85px;
+}
+@-webkit-keyframes cubeRotate {
+  from {
+    transform: rotateY(0deg) rotateX(720deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(0deg) rotateZ(360deg);
+  }
+}
+@keyframes cubeRotate {
+  from {
+    transform: rotateY(0deg) rotateX(720deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(0deg) rotateZ(360deg);
+  }
+}
 
 .navbar-collapse .navbar-collaps-text {
   display: none;
@@ -16,16 +127,19 @@
     padding-left: calc(50% - 100px);
   }
   .navbar-collapse .navbar-collaps-text li {
-    padding-bottom: 15px;
+    padding-bottom: 55px;
   }
   .navbar-collapse .navbar-collaps-text li a {
     font-family: "20 Kopeek Book";
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 45px;
     line-height: 100%;
     color: white;
     align-items: center;
+  }
+  .navbar-collapse .navbar-collaps-text li a span {
+    color: black;
   }
 }
 @media screen and (max-width: 990px) {
