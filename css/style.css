@@ -116,6 +116,11 @@ header {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .navbar-collapse {
+    position: fixed !important;
+  }
+}
 .navbar-collapse .navbar-collaps-text {
   display: none;
 }
@@ -124,7 +129,6 @@ header {
     list-style: none;
     display: block;
     padding-top: 50%;
-    padding-left: calc(50% - 100px);
   }
   .navbar-collapse .navbar-collaps-text li {
     padding-bottom: 55px;
@@ -138,15 +142,16 @@ header {
     color: white;
     align-items: center;
   }
-  .navbar-collapse .navbar-collaps-text li a span {
-    color: black;
+}
+@media screen and (max-width: 990px) and (max-width: 400px) {
+  .navbar-collapse .navbar-collaps-text li a {
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 990px) {
   .navbar-collapse {
-    background: linear-gradient(90deg, hsla(0deg, 0%, 100%, 0.1) 50%, hsla(0deg, 0%, 0%, 0.5) 50%);
-    -webkit-backdrop-filter: blur(1rem);
-            backdrop-filter: blur(1rem);
+    background: linear-gradient(to left, hsla(222deg, 75%, 15%, 0.8) 20%, hsla(35deg, 65%, 45%, 0.8) 30%, hsla(190deg, 55%, 35%, 0.8) 45%, hsla(243deg, 55%, 15%, 0.8) 55%, hsla(339deg, 85%, 15%, 0.8) 70%, hsla(243deg, 55%, 15%, 0.8) 80%);
+    background: linear-gradient(to left, hsla(222deg, 75%, 15%, 0.8) 20%, hsla(35deg, 65%, 45%, 0.8) 30% 45%, hsla(190deg, 55%, 35%, 0.8) 55% 70%, hsla(355deg, 65%, 55%, 0.8) 80%);
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -154,21 +159,13 @@ header {
     left: 0;
   }
 }
-.navbar-collapse .navbar-nav .nav-item-two {
-  display: flex;
-}
 @media screen and (max-width: 990px) {
   .navbar-collapse .navbar-nav .nav-item-two {
-    flex-direction: column-reverse;
     padding-top: 50px;
   }
 }
 @media screen and (max-width: 990px) {
   .navbar-collapse .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    padding-top: 80px;
-    justify-content: space-between;
     padding-inline: 12px;
   }
 }
@@ -221,23 +218,27 @@ header {
   background-image: url(../img/01\ 1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
 }
 .main__banner .item-2 {
   background-image: url(../img/hedbeg.2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
 }
 .main__banner .item-3 {
   background-image: url(../img/header.beg.3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
 }
 .main__banner .item-4 {
   background-image: url(../img/hede.bg.4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top center;
   height: 100vh;
 }/*# sourceMappingURL=style.css.map */

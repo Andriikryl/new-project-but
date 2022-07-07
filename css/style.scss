@@ -156,13 +156,15 @@ header{
 }
 
 .navbar-collapse{
+    @include max-screen( 990px){
+        position: fixed !important;
+    }
     .navbar-collaps-text{
         display: none;
         @include max-screen( 990px){
             list-style: none;
             display: block;
             padding-top: 50%;
-            padding-left: calc(50% - 100px);
             li{
                 padding-bottom: 55px;
                 a{
@@ -173,17 +175,18 @@ header{
                     line-height: 100%;
                     color: white;
                     align-items: center;
-                    span{
-                        color: black;
+                    @include max-screen( 400px){
+                        font-size: 30px
                     }
                 }
             }
         }
     }
     @include max-screen( 990px){
-        background: linear-gradient(90deg, hsl(0 0% 100% /0.1) 50%, hsl(0 0% 0% /0.5) 50%);
-        // background: hsl(0 0% 100% /0.1);
-        backdrop-filter: blur(1rem);
+        background: linear-gradient(to left,
+        hsla(222, 75%, 15%, 0.8) 20%, hsla(35, 65%, 45%, 0.8) 30%, hsla(190, 55%, 35%, 0.8) 45%, hsla(243, 55%, 15%, 0.8) 55%, hsla(339, 85%, 15%, 0.8) 70%, hsla(243, 55%, 15%, 0.8) 80% );
+        background: linear-gradient(to left,
+        hsla(222, 75%, 15%, 0.8) 20%, hsla(35, 65%, 45%, 0.8) 30% 45%, hsla(190, 55%, 35%, 0.8) 55% 70%, hsla(355, 65%, 55%, 0.8) 80% );
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -194,17 +197,12 @@ header{
     .navbar-nav{
  
         .nav-item-two{
-            display: flex;
+            
             @include max-screen( 990px){
-            flex-direction: column-reverse;
             padding-top: 50px;
             }
         }
         @include max-screen( 990px){
-            display: flex;
-            flex-direction: row;
-            padding-top: 80px;
-            justify-content: space-between;
             padding-inline: 12px;
         }
 
@@ -255,24 +253,29 @@ header{
         background-image: url(../img/01\ 1.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
         height: 100vh;
+
     }
     .item-2{
         background-image: url(../img/hedbeg.2.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
         height: 100vh;
     }    
     .item-3{
         background-image: url(../img/header.beg.3.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
         height: 100vh;
     }    
     .item-4{
         background-image: url(../img/hede.bg.4.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: top center;
         height: 100vh;
     }
 }
